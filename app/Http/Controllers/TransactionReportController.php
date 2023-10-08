@@ -42,6 +42,12 @@ class TransactionReportController extends Controller
                 ]);
                 $result = json_decode($response->getBody(),true);
 
+                /*$transaction = new Transaction();
+                    $transaction->count = $count;
+                    $transaction->total = $total;          Örnek = //Gelen datayı veri tabanına kaydetme
+                    $transaction->currency = $currency;
+                    $transaction->save(); */
+
                 if (isset($result['count , total , currency'])) {
                     $count = $result['count'];
                     $total = $result['total'];
