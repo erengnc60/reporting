@@ -232,50 +232,7 @@
                     </div>
 
                 </div>
-                @section('content')
-                    <form action="{{ route('Transaction') }}" method="POST">
-                        @csrf
-                    <label for="startDate">Start Date</label>
-                    <input type="date" name="fromDate" id="startDate">
 
-                    <label for="endDate">End Date</label>
-                    <input type="date" name="toDate" id="endDate">
-
-                    <br>
-
-                    <label for="selectColumn">Merchant</label>
-                    <select id="selectColumn" name="merchant">
-                        <option value="">Tümü</option>
-                        <option value="1">Adidas</option>
-                        <option value="2">Nike</option>
-                        <option value="3">Puma</option>
-                    </select>
-                    <label for="selectColumn">Acquirer</label>
-                    <select id="selectColumn" name="acquirer">
-                        <option value="">Tümü</option>
-                        <option value="1">Eren Genc</option>
-                        <option value="2">Dezin</option>
-                    </select>
-                    <button id="filterButton">Filter</button>
-                    <h2>TRANSACTION REPORT</h2>
-                        @isset($result)
-                    <table id="Transaction" class="display">
-                        <thead>
-                        <tr>
-                            <th>Count</th>
-                            <th>Total</th>
-                            <th>Currency</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                @foreach($result as $item)
-                        <tr>
-                            <td>{{ $item->count }}</td>
-                            <td>{{ $item->total }}</td>
-                            <td>{{ $item->currency }}</td>
-                        </tr>
-                @endforeach
-                        <!-- Daha fazla veri ekleyebilirsiniz -->
                         </tbody>
                     </table>
                         @else
@@ -284,20 +241,6 @@
                     <br>
 
                     <script>
-                        $(document).ready(function () {
-                            var table = $('#myTable').DataTable({
-                                "paging": false,
-                                "searching": false
-                            });
-
-                            $('#filterButton').on('click', function () {
-                                var startDate = $('#startDate').val();
-                                var endDate = $('#endDate').val();
-                                var selectedCity = $('#selectColumn').val();
-
-                                table.columns(1).search(startDate + ' to ' + endDate).columns(2).search(selectedCity).draw();
-                            });
-                        });
                     </script>
             </div>
 <!-- ./wrapper -->

@@ -245,10 +245,52 @@
 
                         <label for="selectColumn">Merchant</label>
                         <select id="selectColumn" name="merchant">
-                            <option value="">Tümü</option>
+                            <option value="">Select</option>
                             <option value="1">Adidas</option>
                             <option value="2">Nike</option>
                             <option value="3">Puma</option>
+                        </select>
+                        <label for="selectColumn">Acquirer</label>
+                        <select id="selectColumn" name="acquirer">
+                            <option value="">Select</option>
+                            <option value="1">Eren Genc</option>
+                            <option value="2">Dezin</option>
+                        </select>
+                        <label for="selectColumn">Status</label>
+                        <select id="selectColumn" name="status">
+                            <option value="">Select</option>
+                            <option value="APPROVED">APPROVED</option>
+                            <option value="WAITING">WAITING</option>
+                            <option value="DECLINED">DECLINED</option>
+                            <option value="ERROR">ERROR</option>
+                        </select>
+                        <label for="selectColumn">Operation</label>
+                        <select id="selectColumn" name="operation">
+                            <option value="">Select</option>
+                            <option value="DIRECT">DIRECT</option>
+                            <option value="REFUND">REFUND</option>
+                            <option value="3D">3D</option>
+                            <option value="3DAUTH">3DAUTH</option>
+                            <option value="3DAUTH">STORED</option>
+                        </select>
+                        <label for="selectColumn">Payment Method</label>
+                        <select id="selectColumn" name="paymentMethod">
+                            <option value="">Select</option>
+                            <option value="CREDITCARD">CREDITCARD</option>
+                            <option value="CUP">CUP</option>
+                            <option value="IDEAL">IDEAL</option>
+                            <option value="GIROPAY">GIROPAY</option>
+                            <option value="MISTERCASH">MISTERCASH</option>
+                            <option value="STORED">STORED</option>
+                            <option value="PAYTOCARD">PAYTOCARD</option>
+                            <option value="CEPBANK">CEPBANK</option>
+                            <option value="CITADEL">CITADEL</option>
+                        </select>
+                        <label for="selectColumn">Error Code</label>
+                        <select id="selectColumn" name="errorCode">
+                            <option value="">Select</option>
+                            <option value="1">Do not honor</option>
+                            <option value="2">Dezin</option>
                         </select>
                         <label for="selectColumn">Acquirer</label>
                         <select id="selectColumn" name="acquirer">
