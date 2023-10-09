@@ -21,7 +21,7 @@ class GetClientController
          }
          $http = new \GuzzleHttp\Client;
          $transactionId = $request->input('transactionId');
-         $response = $http->post(env('BASE_URL') . '/transactions/report',[
+         $response = $http->post(env('BASE_URL') . '/client',[
              'headers' => [
                  'Authorization' => $token,
              ],
