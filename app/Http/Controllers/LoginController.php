@@ -36,7 +36,6 @@ class LoginController extends Controller
           ]
       ]);
       $result = json_decode((string) $response->getBody(),true);
-      dd($result);
       if ($response->getStatusCode() === 200)
       {
           $accessToken = $result ['token'];
@@ -45,7 +44,7 @@ class LoginController extends Controller
           $error = $result['code'];
           $errorMessage = $data['message'];
       }
-      return view('welcome', );
+      return view('welcome');
   }
   public function updateToken(Request $request)
   {

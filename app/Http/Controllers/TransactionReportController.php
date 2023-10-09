@@ -15,7 +15,7 @@ class TransactionReportController extends Controller
 {
     public function transactionView(Request $request)
     {
-        return view('welcome');
+        return view('transaction-report');
     }
     public function Transaction(Request $request)
     {
